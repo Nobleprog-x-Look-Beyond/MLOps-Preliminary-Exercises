@@ -1,8 +1,12 @@
+Diese Aufgaben sollen Ihnen die Möglichkeit geben, sich mit AWS vertraut zu machen/ die nötigen Tools aufzufrischen. Weiterhin sollen
+	1.	Funktionierendes AWS-Konto mit sicherem IAM-Benutzer erstellt werden.
+	2.	Das AWS CLI installiert und konfiguriert werden.
+	3.	Das AWS CLI getestet und genutzt werden für S3 und EC2.
+
 
 1. Erstellen eines AWS-Kontos
 	1.	Anmelden: Gehen Sie zu aws.amazon.com und erstellen Sie ein neues Konto (oder melden Sie sich an, wenn Sie bereits eines haben).
 	2.	Registrierung abschließen: Geben Sie die erforderlichen Daten an (Kreditkarte usw.). Für die meisten Einführungsexperimente können sie die kostenlose Stufe nutzen.
-	3.	Aktivieren Sie MFA (Multi-Faktor-Authentifizierung) für das Root-Konto, um optimale Sicherheit zu gewährleisten.
 
 2. Erstellen Sie einen IAM-Benutzer und Zugriffsschlüssel
 	1.	Öffnen Sie IAM: Gehen Sie in der AWS Management Console zu IAM (Identity & Access Management).
@@ -12,62 +16,44 @@
 
 3. AWS CLI installieren
 	1.	Installieren:
-	- Windows: Laden Sie das MSI von AWS CLI Downloads herunter.
-	- macOS & Linux: Verwenden Sie curl + chmod wie in den AWS CLI-Dokumenten beschrieben.
-	2.	Überprüfen Sie:
-
-aws --version
-
-Es sollte die AWS CLI-Version ausgegeben werden (z. B. aws-cli/2.11.5 Python/3.9 ...).
+		- Windows: Laden Sie das MSI von AWS CLI Downloads herunter.
+		- macOS & Linux: Verwenden Sie curl + chmod wie in den AWS CLI-Dokumenten beschrieben.
+	2.	Überprüfen Sie: 
+	aws --version
+	
+	Es sollte die AWS CLI-Version ausgegeben werden (z. B. aws-cli/2.11.5 Python/3.9 ...).
 
 4. AWS CLI konfigurieren
 	1.	Anmeldeinformationen einrichten:
-
-aws configure
-
+	aws configure
 
 	2.	Eingeben:
-	- AWS-Zugangsschlüssel
-	- AWS-Geheimschlüssel
-	- Standardregion (z. B. us-east-1)
-	- Standard-Ausgabeformat (json, yaml, etc.)
+		- AWS-Zugangsschlüssel
+		- AWS-Geheimschlüssel
+		- Standardregion (z. B. us-east-1)
+		- Standard-Ausgabeformat (json, yaml, etc.)
 	3.	Validieren: Überprüfen Sie Ihre Konfigurationsdatei (~/.aws/credentials oder ~/.aws/config).
 
 5. Testen Sie AWS CLI-Befehle
 
 Aufgabe 5a: S3-Buckets auflisten
 	1.	Ausführen:
-
-aws s3 ls
-
+	aws s3 ls
 	- Wenn Sie vorhandene Buckets haben, werden diese aufgelistet.
 	- Andernfalls erhalten Sie keine Ausgabe oder ein leeres Ergebnis.
 
 Aufgabe 5b: Erstellen und Überprüfen eines S3 Buckets
 	1.	Erstellen Sie:
-
-aws s3 mb s3://<eindeutiger-bucket-name>
-
+	aws s3 mb s3://<bucket-name>
 
 	2.	Buckets auflisten:
+	aws s3 ls
 
-aws s3 ls
-
-Bestätigen Sie, dass Ihr neu erstellter Bucket angezeigt wird.
+	Bestätigen Sie, dass Ihr neu erstellter Bucket angezeigt wird.
 
 Aufgabe 5c: EC2-Instanzen auflisten
 	1.	Führen Sie aus:
+	aws ec2 describe-instances
 
-aws ec2 describe-instances
-
-
-	2.	Wenn Sie keine Instanzen haben, erhalten Sie eine leere Reservationsliste. Wenn Sie laufende/gestoppte Instanzen haben, werden diese angezeigt.
-
-
-
-Diese Aufgaben stellen sicher, dass die Studenten über folgendes verfügen:
-	1.	Funktionierende AWS-Konten mit sicheren IAM-Benutzern.
-	2.	Die AWS CLI installiert und konfiguriert haben.
-	3.	Grundlegende praktische Erfahrung mit der Überprüfung von Befehlen mit S3 und EC2.
-
+	Wenn Sie keine Instanzen haben, erhalten Sie eine leere Reservationsliste. Wenn Sie laufende/gestoppte Instanzen haben, werden diese angezeigt.
 
