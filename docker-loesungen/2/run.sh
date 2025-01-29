@@ -1,0 +1,1 @@
+docker run --rm -e USER_NAME="Alice" env-docker

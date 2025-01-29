@@ -1,0 +1,33 @@
+1.	Hallo CLI
+	- Schreiben Sie ein einfaches Skript, das Befehlszeilenargumente (z. B. den Namen des Benutzers) entgegennimmt und eine Begrüßung ausgibt.
+
+2.	Virtuelle Umgebungen
+	- Erstellen Sie eine virtuelle Umgebung (venv oder Conda).
+	- Installieren Sie ein Paket (z.B. requests) in dieser Umgebung und überprüfen Sie, ob es funktioniert.
+
+3.	Lesen und Schreiben von Daten
+	- Lesen Sie eine CSV-Datei mit pandas. Nutzen Sie gern das "iris" Dataset aus scicit-learn
+	- Geben Sie einige Statistiken oder Erkenntnisse aus.
+	- Schreiben Sie die verarbeiteten Daten zurück in eine andere CSV-Datei.
+
+4.	Protokollierung
+	- Verwenden Sie das Logging-Modul, um Informationen, Fehler und Warnungen in einem kleinen Skript zu protokollieren.
+	- Üben Sie die Protokollierung sowohl auf der Konsole als auch in einer Datei.
+
+5.	Einfache Tests
+	- Schreiben Sie eine Funktion (z.B. eine einfache mathematische Operation).
+	- Fügen Sie einen Unit-Test mit unittest oder pytest hinzu, um die Ausgabe der Funktion zu überprüfen.
+
+6.	Grundlegende Paketierung
+	- Organisieren Sie den Code in Modulen/Paketen.
+	- Erstellen Sie eine einfache setup.py oder pyproject.toml (wenn Sie neugierig auf die Paketierung sind).
+
+7. Virtueller server
+	- Erstellen Sie einen virtuellen Server mittels FastAPI
+	- Der Server hat einen Root Endpoint "/", der Hello Word ausgibt
+	- Lassen Sie diesen auf Port 3000 laufen
+
+8. Machine Learning - Basics
+	- Trainieren Sie mithilfe von scikit-learn ein Logistic-Regression-Modell (z. B. mit dem Iris-Datensatz).
+	- Speichern Sie das Modell mit joblib.dump() ab.
+	- Laden Sie das Modell wieder per joblib.load() und führen Sie eine Testvorhersage durch.

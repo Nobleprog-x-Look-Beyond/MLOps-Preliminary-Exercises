@@ -1,0 +1,33 @@
+
+1. Hello Docker
+	- Ziel: Ein einfaches Python-Skript „Hello World“ in Container packen.
+	- Schritte:
+	1.	Erstelle app.py, das Hello von Docker! ausdruckt.
+	2.	Schreiben Sie ein Dockerfile (basierend auf python:3.9-alpine oder ähnlich).
+	3.	Erstellen Sie das Image mit einem eigenen Namen.
+	4.	Starten Sie den Container und bestätigen Sie, dass Sie die Meldung sehen.
+
+2. Umgebungsvariablen
+	- Ziel: Üben der Übergabe von Umgebungsvariablen an einen Container.
+	- Schritte:
+	1.	Erweitern Sie die vorherige app.py, um eine Umgebungsvariable zu lesen (z.B. USER_NAME).
+	2.	Aktualisieren Sie das Dockerfile, falls erforderlich.
+	3.	Starten Sie den Container mit docker run -e USER_NAME=„Alice“ <image>.
+	4.	Drucken Sie die Variable innerhalb des Containers aus, um sie zu überprüfen.
+
+3. Ports freilegen
+	- Ziel: Einen einfachen Webserver in Docker erstellen.
+	- Schritte:
+	1.	Schreiben Sie eine kleine Flask-Anwendung (server.py), die auf Port 5000 läuft.
+	2.	Aktualisieren Sie das Dockerfile, um Flask zu installieren und server.py auszuführen.
+	3.	Verwenden Sie EXPOSE 5000 in der Dockerdatei.
+	4.	Bauen Sie den Container und führen Sie ihn aus, wobei Sie den Container-Port 5000 auf Ihren lokalen Rechner abbilden: 
+        docker run -p 5000:5000 <image>
+	5.	Besuchen Sie http://localhost:5000, um sich zu vergewissern, dass der Dienst korrekt funktioniert.
+
+
+Diese Übungen decken die Grundlagen ab:
+	- Docker-Images erstellen
+	- Ausführen von Containern
+	- Verwalten von Umgebungsvariablen
+	- Freigeben von Container-Ports
